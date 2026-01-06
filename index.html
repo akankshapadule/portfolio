@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <style>
         * {
@@ -120,6 +122,15 @@
             text-align: center;
             font-weight: 500;
         }
+        .skill-box ul li {
+            display: inline-block;
+            background-color: rgba(90, 90, 185, 0.15);
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 6px;
+            font-size: 0.9rem;
+        }
+
 
         .skill-box ul {
             list-style: none;
@@ -219,6 +230,21 @@
             color: white;
             transform: scale(1.05);
         }
+        .tagline {
+            font-size: 1rem;
+            color: #cfd2ff;
+            margin-top: 8px;
+        }
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+
     </style>
 </head>
 
@@ -246,8 +272,9 @@
             <div class="leftsection">
                 <div class="welcome-text">Welcome to My Professional Portfolio</div>
                 Hi, I’m <span class="purple">Akanksha Padule</span>
-
-                <br><br>
+                <div class="tagline">
+                      Aspiring Computer Engineer | Web & Python Developer
+                      </div>
                 <div class="btn-container">
                     <a href="Akanksha_Padule_Resume.pdf" download class="resume-btn">
                         Download Resume
@@ -361,25 +388,23 @@
 
         <!-- CONTACT -->
         <section class="contact" id="contact">
-            <h1>Contact Me</h1>
-            <p>Email: paduleakanksha@gmail.com</p>
-            <p>Phone: +91 7058258549</p>
-            <p>Location: India</p>
-            <p>
-                LinkedIn:
+             <h1>Contact Me</h1>
+             <p><i class="fa-solid fa-envelope"></i> paduleakanksha@gmail.com</p>
+             <p><i class="fa-brands fa-linkedin"></i>
                 <a href="https://www.linkedin.com/in/akanksha-padule-1374b329a" target="_blank" class="social-link">
-                    linkedin.com/in/akanksha-padule-1374b329a
+                     LinkedIn Profile
                 </a>
-            </p>
-
+             </p>
         </section>
 
+    
     </main>
 
     <!-- FOOTER -->
     <footer>
-        © 2025 Akanksha Padule | All Rights Reserved
-    </footer>
+    © 2025 Akanksha Padule | Built with HTML, CSS & ❤️
+</footer>
+
 
     <!-- TYPED JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -396,4 +421,5 @@
 
 
 </html>
+
 
