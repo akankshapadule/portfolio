@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         * {
@@ -37,6 +38,7 @@
             background-color: rgb(16, 16, 95);
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         nav ul {
@@ -63,17 +65,42 @@
             font-weight: 600;
         }
 
+        /* SECTIONS */
+        section {
+            padding: 70px 80px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: rgb(90, 90, 185);
+        }
+
         /* HERO SECTION */
         .firstsection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 80px 0;
+            margin-top: 40px;
         }
 
         .leftsection {
             width: 45%;
             font-size: 1.6rem;
+        }
+
+        .welcome-text {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #cfd2ff;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #cfd2ff;
+            margin: 10px 0 20px;
         }
 
         .rightsection img {
@@ -89,16 +116,51 @@
         #element {
             color: rgb(90, 90, 185);
             font-weight: 600;
+            display: block;
+            margin-top: 10px;
         }
 
-        section {
-            padding: 60px 80px;
+        /* BUTTONS */
+        .btn-container {
+            margin: 25px 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .resume-btn {
+            padding: 12px 25px;
+            background-color: rgb(90, 90, 185);
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .resume-btn:hover {
+            background-color: white;
             color: rgb(90, 90, 185);
+            transform: scale(1.05);
+        }
+
+        .linkedin-btn {
+            padding: 12px 25px;
+            background-color: transparent;
+            color: rgb(90, 90, 185);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 30px;
+            border: 2px solid rgb(90, 90, 185);
+            transition: 0.3s;
+        }
+
+        .linkedin-btn:hover {
+            background-color: rgb(90, 90, 185);
+            color: white;
+            transform: scale(1.05);
         }
 
         /* ABOUT */
@@ -120,8 +182,18 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            font-weight: 500;
         }
+
+        .skill-box h3 {
+            color: rgb(90, 90, 185);
+            margin-bottom: 10px;
+        }
+
+        .skill-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
         .skill-box ul li {
             display: inline-block;
             background-color: rgba(90, 90, 185, 0.15);
@@ -130,16 +202,6 @@
             margin: 6px;
             font-size: 0.9rem;
         }
-
-
-        .skill-box ul {
-            list-style: none;
-            /* removes bullets */
-            padding-left: 0;
-            /* removes left indentation */
-            margin: 0;
-        }
-
 
         /* PROJECTS */
         .projects-container {
@@ -152,6 +214,12 @@
             background-color: rgb(16, 16, 95);
             padding: 20px;
             border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         .project-card h3 {
@@ -171,80 +239,36 @@
             padding: 25px;
             border-radius: 10px;
             width: 300px;
+            text-align: center;
         }
 
         /* CONTACT */
         .contact p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 1rem;
+        }
+
+        .contact i {
+            margin-right: 10px;
+            color: rgb(90, 90, 185);
+        }
+
+        .social-link {
+            color: rgb(90, 90, 185);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
             padding: 20px;
             background-color: rgb(16, 16, 95);
-            margin-top: 40px;
             font-size: 0.9rem;
         }
-
-        .btn-container {
-            margin-top: 25px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        /* Resume Button (already added earlier) */
-        .resume-btn {
-            padding: 12px 25px;
-            background-color: rgb(90, 90, 185);
-            color: white;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
-
-        .resume-btn:hover {
-            background-color: white;
-            color: rgb(90, 90, 185);
-            transform: scale(1.05);
-        }
-
-        /* LinkedIn Button */
-        .linkedin-btn {
-            padding: 12px 25px;
-            background-color: transparent;
-            color: rgb(90, 90, 185);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border-radius: 30px;
-            border: 2px solid rgb(90, 90, 185);
-            transition: 0.3s;
-        }
-
-        .linkedin-btn:hover {
-            background-color: rgb(90, 90, 185);
-            color: white;
-            transform: scale(1.05);
-        }
-        .tagline {
-            font-size: 1rem;
-            color: #cfd2ff;
-            margin-top: 8px;
-        }
-        .project-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-
     </style>
 </head>
 
@@ -259,188 +283,4 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- MAIN -->
-    <main>
-
-        <!-- HERO -->
-        <section class="firstsection" id="home">
-            <div class="leftsection">
-                <div class="welcome-text">Welcome to My Professional Portfolio</div>
-                Hi, I’m <span class="purple">Akanksha Padule</span>
-                <div class="tagline">
-                      Aspiring Computer Engineer | Web & Python Developer
-                      </div>
-                <div class="btn-container">
-                    <a href="Akanksha_Padule_Resume.pdf" download class="resume-btn">
-                        Download Resume
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/akanksha-padule-1374b329a" target="_blank"
-                        class="linkedin-btn">
-                        LinkedIn Profile
-                    </a>
-                </div>
-
-
-
-                <div>I am a Computer Engineering Student</div>
-                <span id="element"></span>
-            </div>
-
-            <div class="rightsection">
-                <img src="myphoto.png" alt="Profile Photo">
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about" id="about">
-            <h1>About Me</h1>
-            <p>
-                Motivated and detail-oriented Computer Engineering fresher with strong foundations in programming, web
-                development, databases, and AI concepts. Hands-on experience in developing real-world academic projects
-                such as Face Recognition Attendance System and QR-Based Student Information System. Published a research
-                paper in LLM-enhanced multimodal stock market prediction. Possess strong communication, teamwork, and
-                problem-solving skills with a passion for continuous learning and innovation.
-            </p>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills">
-            <h1>Skills</h1>
-
-            <div class="skills-container">
-
-                <!-- Technical Skills -->
-                <div class="skill-box">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>MySQL</li>
-                        <li>Web Development</li>
-                    </ul>
-                </div>
-
-                <!-- Tools & Platforms -->
-                <div class="skill-box">
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>GitHub</li>
-                    </ul>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="skill-box">
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Strong Communication & Presentation Skills</li>
-                        <li>Teamwork & Leadership</li>
-                        <li>Problem-Solving Ability</li>
-                        <li>Time Management</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section id="projects">
-            <h1>Projects</h1>
-            <div class="projects-container">
-                <div class="project-card">
-                    <h3>Face Recognition Attendance System</h3>
-                    <p>Automated attendance system using face recognition to reduce manual effort and improve accuracy.
-                    </p>
-                </div>
-
-                <div class="project-card">
-                    <h3>QR Code Information System</h3>
-                    <p>System that provides instant access to information through QR code scanning.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Cryptocurrency System</h3>
-                    <p>Basic cryptocurrency system demonstrating transactions and security concepts.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section>
-            <h1>Services</h1>
-            <div class="services-container">
-                <div class="service-box">Web Development</div>
-                <div class="service-box">Python Programming</div>
-                <div class="service-box">Project Development</div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact" id="contact">
-    <h1>Contact Me</h1>
-
-    <p>
-        <i class="fa-solid fa-envelope"></i>
-        paduleakanksha@gmail.com
-    </p>
-
-    <p>
-        <i class="fa-solid fa-phone"></i>
-        +91 7058258549
-    </p>
-
-    <p>
-        <i class="fa-solid fa-location-dot"></i>
-        India
-    </p>
-
-    <p>
-        <i class="fa-brands fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/akanksha-padule-1374b329a"
-           target="_blank"
-           class="social-link">
-            LinkedIn Profile
-        </a>
-    </p>
-</section>
-
-
-    
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-    © 2025 Akanksha Padule | Built with HTML, CSS & ❤️
-</footer>
-
-
-    <!-- TYPED JS -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Python Developer', 'Good Communication Skills'],
-            typeSpeed: 60,
-            backSpeed: 40,
-            loop: true
-        });
-    </script>
-
-</body>
-
-
-</html>
-
-
-
-
+                <li><a href="#contact">Contact</
